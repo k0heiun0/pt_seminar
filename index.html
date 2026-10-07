@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>動画で上肢の動きを測る</title>
+<style>
+:root { --bg:#ffffff; --fg:#1a1a2e; --muted:#5b6380; --line:#dfe3ee; --accent:#0f3460; --head:#f3f5fb; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#14161f; --fg:#e8eaf2; --muted:#a3a9c0; --line:#2c3142; --accent:#8fb3ff; --head:#1d2130; }
+}
+body { margin:0; background:var(--bg); color:var(--fg);
+  font-family:'Hiragino Sans','Noto Sans JP',sans-serif; line-height:1.7; }
+main { max-width:860px; margin:0 auto; padding:40px 16px 64px; }
+h1 { font-size:1.9rem; margin:0 0 4px; }
+.sub { color:var(--muted); margin:0 0 32px; }
+h2 { font-size:1.2rem; border-bottom:2px solid var(--accent); padding-bottom:4px; margin-top:40px; }
+table { width:100%; border-collapse:collapse; }
+th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { background:var(--head); font-weight:600; }
+td:first-child { white-space:nowrap; }
+a { color:var(--accent); }
+ol li { margin:4px 0; }
+.note { color:var(--muted); font-size:0.9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>動画で上肢の動きを測る</h1>
+<p class="sub">マーカーレスモーションキャプチャー入門　理学療法士のための半日ワークショップ</p>
+
+<h2>スライド</h2>
+<table>
+<tr><th>どれ</th><th>開く</th><th>中身</th></tr>
+<tr><td>本編</td><td><a href="slides/seminar.html">スライド</a>　<a href="slides/seminar.pdf">PDF</a></td><td>今日の問い：スマホ動画1本から、この上肢は良くなったと言えるか</td></tr>
+<tr><td>発展編（任意）</td><td><a href="slides/seminar_advanced.html">スライド</a>　<a href="slides/seminar_advanced.pdf">PDF</a></td><td>仕組み・信頼性と妥当性・架空の症例・倫理・用語集</td></tr>
+</table>
+<p class="note">スライドはブラウザでそのまま開けます（←→キーで送る）。印刷や配布にはPDFを使ってください。</p>
+
+<h2>Colabノート</h2>
+<table>
+<tr><th>どれ</th><th>開く</th><th>中身</th></tr>
+<tr><td>実習①</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/01_ROM_evaluation.ipynb">Colabで開く</a></td><td>動画から肩の角度を測る（本編3節・4節）</td></tr>
+<tr><td>実習②</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/02_reaching_motion.ipynb">Colabで開く</a></td><td>手の動きの質を見る（本編5節）</td></tr>
+<tr><td>発展のノート</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/03_advanced.ipynb">Colabで開く</a></td><td>体幹の代償・肩と肘の協調・手首の軌跡（任意）</td></tr>
+<tr><td>自分の動画で動かす</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/00_body4d_inference.ipynb">Colabで開く</a></td><td>SAM-Body4Dの推論（任意・GPUとHugging Faceの準備が必要）</td></tr>
+</table>
+
+<h2>ノートの使い方</h2>
+<ol>
+<li>「Colabで開く」を押し、Googleアカウントでログインする</li>
+<li>左上の［ドライブにコピー］を押す（コピーしないと書き換えが保存されない）</li>
+<li>「2. データを持ってくる」のセルに、講師から配られたIDを貼る</li>
+<li>上のセルから順に、▶を全部押す</li>
+</ol>
+
+<h2>サンプルデータ</h2>
+<p>公開されている動画（Pexels）をSAM-Body4Dで推論し、1コマごとの体の22点の位置にしたものです。患者のデータではありません。</p>
+<ul>
+<li><a href="data/rom_task_output.json">rom_task_output.json</a>：真横から撮った肩の前方挙上の繰り返し（7秒・175コマ）</li>
+<li><a href="data/reaching_output.json">reaching_output.json</a>：グラスに水を注ぎ、手に取る動作（8秒・200コマ）</li>
+</ul>
+
+<h2>自分の動画で試したい人へ</h2>
+<p><a href="https://github.com/k0heiun0/pt_seminar/blob/main/docs/handout-hf-setup.md">Hugging Faceアカウントの事前準備の手順書</a>を先に済ませてから、「自分の動画で動かす」のノートを開いてください。本編の実習①・②には、この準備は要りません。</p>
+</main>
+</body>
+</html>

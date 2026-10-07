@@ -1,0 +1,198 @@
+/* @theme pt-seminar */
+section {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: #ffffff;
+  color: #1a1a2e;
+  font-size: 28px;
+  padding: 40px 60px;
+}
+
+section h1 {
+  color: #16213e;
+  font-size: 52px;
+  border-bottom: 4px solid #0f3460;
+  padding-bottom: 16px;
+}
+
+section h2 {
+  color: #0f3460;
+  font-size: 40px;
+}
+
+section h3 {
+  color: #533483;
+  font-size: 32px;
+}
+
+section.title {
+  background: linear-gradient(135deg, #16213e 0%, #0f3460 60%, #533483 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.title h1 {
+  color: white;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  font-size: 44px;
+}
+
+section.title h2 {
+  color: rgba(255,255,255,0.85);
+  font-size: 28px;
+}
+
+section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+section th {
+  background: #0f3460;
+  color: white;
+  padding: 6px 16px;
+}
+
+section td {
+  padding: 6px 16px;
+  border: 1px solid #ddd;
+}
+
+section code {
+  background: #f0f4ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+section.section-break {
+  background: #0f3460;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.section-break h1 {
+  color: white;
+  border: none;
+}
+
+section.section-break h2 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== 画像レイアウト（ビジュアル再設計）===== */
+section img { border-radius: 8px; }
+section figcaption { color: #533483; font-size: 0.8em; margin-top: 8px; }
+
+/* 左テキスト・右画像の2カラム */
+section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  font-size: 23px;
+  line-height: 1.35;
+}
+section.split h1 { font-size: 38px; margin-bottom: 12px; padding-bottom: 8px; }
+section.split h2 { font-size: 27px; }
+section.split h3 { font-size: 24px; }
+section.split p { margin: 0.35em 0; }
+section.split ul { margin: 0.3em 0; padding-left: 1.2em; }
+section.split li { margin: 0.15em 0; }
+section.split pre { padding: 12px; font-size: 0.78em; line-height: 1.3; }
+section.split img { max-width: 100%; max-height: 66vh; object-fit: contain; }
+
+/* 中央大図＋キャプション */
+section.figure {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.35;
+}
+section.figure h1 { font-size: 40px; flex-shrink: 0; margin-bottom: 12px; padding-bottom: 8px; }
+section.figure > ul, section.figure > ol {
+  text-align: left;
+  max-width: 90%;
+  margin: 0.3em auto;
+  padding-left: 1.3em;
+  flex-shrink: 0;
+}
+section.figure li { margin: 0.15em 0; }
+section.figure > p { flex-shrink: 0; }
+section.figure img {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: 52vh;
+  max-width: 92%;
+  object-fit: contain;
+  margin: 8px auto 0;
+}
+
+/* 図の並置比較 */
+section.two-up .grid,
+section.three-up .grid {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
+section.two-up .grid { grid-template-columns: 1fr 1fr; }
+section.three-up .grid { grid-template-columns: 1fr 1fr 1fr; }
+section.two-up .grid img,
+section.three-up .grid img { width: 100%; object-fit: contain; }
+
+/* 外部写真の未調達プレースホルダ */
+.photo-slot {
+  border: 3px dashed #b0b8d0;
+  background: #f3f5fb;
+  color: #55608a;
+  border-radius: 10px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.85em;
+}
+
+/* ===== 1枚1思考のための追加（2026-10-07）===== */
+/* 札：見出しの上に「節・ブロック」を小さく出す（<!-- _header: 2. 角度 ② 骨格に当てる -->） */
+section header {
+  top: 14px;
+  left: 60px;
+  font-size: 18px;
+  color: #6b7390;
+  letter-spacing: 0.04em;
+}
+section.title header,
+section.section-break header { color: rgba(255, 255, 255, 0.7); }
+
+/* 一文の枚：言いたいことを1文だけ大きく出す */
+section.lead {
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.5;
+}
+section.lead h1 { border-bottom: none; font-size: 30px; color: #6b7390; }
+
+/* コード：初学者が読める大きさ */
+section pre {
+  font-size: 0.82em;
+  line-height: 1.45;
+  border-radius: 8px;
+}
+section pre code { background: none; padding: 0; font-size: 1em; }
+
+/* 小さな注記 */
+section .note { font-size: 0.72em; color: #6b7390; }
+
+/* 1枚1思考では図が主役なので大きく出す（2026-10-07） */
+section.figure img { max-height: 66vh; }
+section.figure > ul + p img, section.figure > p img { max-height: 66vh; }
+section.two-up .grid img { max-height: 58vh; object-fit: contain; }
+section.lead p { margin: 0.2em 0; }
