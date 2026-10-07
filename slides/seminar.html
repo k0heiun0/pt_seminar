@@ -543,7 +543,7 @@ c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></spa
 <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
 <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
 <span class="hljs-keyword">import</span> matplotlib_fontja
-<span class="hljs-keyword">from</span> scipy.signal <span class="hljs-keyword">import</span> find_peaks
+<span class="hljs-keyword">from</span> scipy.signal <span class="hljs-keyword">import</span> find_peaks, savgol_filter
 <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;道具の準備ができました&#x27;</span>)
 </code></pre>
 <ul>
@@ -1371,7 +1371,7 @@ plt.show()
 <li>1行目：隣どうしのコマで、手首が動いた距離（メートル）</li>
 <li>2行目：1コマで動いた距離×1秒あたりのコマ数＝1秒あたりに動く距離</li>
 </ul>
-<p class="note">実習②のノート。手首の位置`wrist`は、その上のセルで取り出している</p>
+<p class="note">ノートの「18. 手の速さを出す」。手首の位置`wrist`は、その上の17のセルで取り出している</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="99" data-paginate="true" data-header="5. どう動くか ② 実データ" data-class="figure" data-style="@import 'marp_theme.css';
 " lang="ja-JP" class="figure" data-marpit-pagination="99" style="--paginate:true;--header:5. どう動くか ② 実データ;--class:figure;--style:@import 'marp_theme.css';
@@ -1484,7 +1484,7 @@ straight = np.linalg.norm(wrist[-<span class="hljs-number">1</span>] - wrist[<sp
 
 <h1 id="%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%E5%AE%9F%E7%BF%92%E2%91%A1">やってみよう：実習②</h1>
 <ol>
-<li>実習②のノートを開き、配られたIDを貼って、上から全部押す</li>
+<li>ノートの「15. データを持ってくる」に2本目のIDを貼り、そこから下を全部押す</li>
 <li>速さの曲線と、山の数・直線性SIを確かめる</li>
 <li>ノートの最後の問いに、メモで答える</li>
 </ol>
@@ -1584,8 +1584,8 @@ straight = np.linalg.norm(wrist[-<span class="hljs-number">1</span>] - wrist[<sp
 <td>仕組み・信頼性・架空の症例・用語集</td>
 </tr>
 <tr>
-<td>実習①・②のノート</td>
-<td>Colabで開き、上から全部押す</td>
+<td>実習ノート（本編）</td>
+<td>Colabで開き、上から全部押す。実習①・②とも、この1本</td>
 </tr>
 <tr>
 <td>発展のノート</td>

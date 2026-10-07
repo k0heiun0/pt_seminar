@@ -13,8 +13,7 @@
 
 | どれ | 開く | 中身 |
 |---|---|---|
-| 実習① | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/01_ROM_evaluation.ipynb) | 動画から肩の角度を測る（本編3節・4節） |
-| 実習② | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/02_reaching_motion.ipynb) | 手の動きの質を見る（本編5節） |
+| 実習ノート（本編） | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/01_handson.ipynb) | 実習①：肩の角度を測る（3節・4節）、実習②：手の動きの質を見る（5節） |
 | 発展のノート | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/03_advanced.ipynb) | 体幹の代償・肩と肘の協調・手首の軌跡（任意） |
 | 自分の動画で動かす | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/00_body4d_inference.ipynb) | SAM-Body4Dの推論（任意・GPUとHugging Faceの準備が必要） |
 
