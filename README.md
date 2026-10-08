@@ -13,9 +13,9 @@
 
 | どれ | 開く | 中身 |
 |---|---|---|
-| 実習ノート（本編） | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/01_handson.ipynb) | 実習①：MediaPipeで肩の角度を2Dと3Dで測り、正解と比べる。実習②：手首の速さ |
+| 実習ノート（本編） | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/01_handson.ipynb) | 実習①：MediaPipeで肩の角度を2Dと3Dで測り、正解と比べる。実習②：手首の速さ。実習③：飲水動作。実習④：手指 |
 | 発展のノート | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/03_advanced.ipynb) | A 挙上面と挙上角、B 代償、C 手指（任意） |
-| 推論用のノート | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/00_body4d_inference.ipynb) | SAM-Body4Dで動画を処理し、正解と比べる（任意・GPUとHugging Faceの準備が必要） |
+| 推論用のノート | [Colabで開く](https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/00_body4d_inference.ipynb) | SAM-Body4Dで動画を処理し、正解と比べる（任意・有料のColabの大きなGPUとHugging Faceの準備が必要） |
 
 Colabで開いたら［ドライブにコピー］を押し、上から順に全部押してください。データは自動で読み込まれます。
 
