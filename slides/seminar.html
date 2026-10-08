@@ -1652,11 +1652,11 @@ plt.show()
 <h1 id="%E9%80%9F%E3%81%95%E3%81%AE%E5%B1%B1%E3%82%92%E6%95%B0%E3%81%88%E3%82%8B">速さの山を数える</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">dspeed = np.linalg.norm(np.diff(hand, axis=<span class="hljs-number">0</span>), axis=<span class="hljs-number">1</span>) * dfps
 dsmooth = savgol_filter(np.nan_to_num(dspeed), window_length=<span class="hljs-number">15</span>, polyorder=<span class="hljs-number">2</span>)
-peaks, _ = find_peaks(dsmooth, height=dsmooth.<span class="hljs-built_in">max</span>() * <span class="hljs-number">0.3</span>,
-                      prominence=dsmooth.<span class="hljs-built_in">max</span>() * <span class="hljs-number">0.3</span>)
+peaks, _ = find_peaks(dsmooth, height=dsmooth.<span class="hljs-built_in">max</span>() * <span class="hljs-number">0.4</span>,
+                      prominence=dsmooth.<span class="hljs-built_in">max</span>() * <span class="hljs-number">0.4</span>)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;山の数&#x27;</span>, <span class="hljs-built_in">len</span>(peaks), <span class="hljs-string">&#x27;山の時刻（秒）&#x27;</span>, np.<span class="hljs-built_in">round</span>(peaks / dfps, <span class="hljs-number">1</span>))
 </code></pre>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">山の数 3 山の時刻（秒） [18.  23.4 24.6]
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">山の数 2 山の時刻（秒） [23.4 24.6]
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="119" data-paginate="true" data-header="6. 飲水動作 ③ 速さの山" data-class="lead" data-style="@import 'marp_theme.css';
@@ -1665,7 +1665,7 @@ peaks, _ = find_peaks(dsmooth, height=dsmooth.<span class="hljs-built_in">max</s
 <header>6. 飲水動作 ③ 速さの山</header>
 
 <h1 id="%E6%8C%81%E3%81%A1%E4%B8%8A%E3%81%92%E3%82%8B%E5%B1%B1%E3%81%AF%E3%81%A9%E3%81%93%E3%81%AB">持ち上げる山はどこに？</h1>
-<p>動画が持ち上げる途中から始まっているので、持ち上げの山は取れていない。撮り始めが、測れるものを決める</p>
+<p>山は下ろすとき（23〜25秒）の2つだけ。動画が持ち上げる途中から始まるので、持ち上げの山は取れない。撮り始めが、測れるものを決める</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="120" data-paginate="true" data-header="6. 飲水動作 ④ 自分のリーチ" data-style="@import 'marp_theme.css';
 " lang="ja-JP" data-marpit-pagination="120" style="--paginate:true;--header:6. 飲水動作 ④ 自分のリーチ;--style:@import 'marp_theme.css';
