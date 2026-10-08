@@ -33,35 +33,34 @@ ol li { margin:4px 0; }
 <table>
 <tr><th>どれ</th><th>開く</th><th>中身</th></tr>
 <tr><td>本編</td><td><a href="slides/seminar.html">スライド</a>　<a href="slides/seminar.pdf">PDF</a></td><td>今日の問い：スマホ動画1本から、この上肢は良くなったと言えるか</td></tr>
-<tr><td>発展編（任意）</td><td><a href="slides/seminar_advanced.html">スライド</a>　<a href="slides/seminar_advanced.pdf">PDF</a></td><td>仕組み・信頼性と妥当性・架空の症例・倫理・用語集</td></tr>
+<tr><td>発展編（任意）</td><td><a href="slides/seminar_advanced.html">スライド</a>　<a href="slides/seminar_advanced.pdf">PDF</a></td><td>挙上面と挙上角・代償・手指・いろいろなモデル・筋骨格モデル・信頼性・用語集</td></tr>
 </table>
 <p class="note">スライドはブラウザでそのまま開けます（←→キーで送る）。印刷や配布にはPDFを使ってください。</p>
 
 <h2>Colabノート</h2>
 <table>
 <tr><th>どれ</th><th>開く</th><th>中身</th></tr>
-<tr><td>実習ノート（本編）</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/01_handson.ipynb">Colabで開く</a></td><td>実習①：肩の角度を測る（3節・4節）、実習②：手の動きの質を見る（5節）</td></tr>
-<tr><td>発展のノート</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/03_advanced.ipynb">Colabで開く</a></td><td>体幹の代償・肩と肘の協調・手首の軌跡（任意）</td></tr>
-<tr><td>自分の動画で動かす</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/00_body4d_inference.ipynb">Colabで開く</a></td><td>SAM-Body4Dの推論（任意・GPUとHugging Faceの準備が必要）</td></tr>
+<tr><td>実習ノート（本編）</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/01_handson.ipynb">Colabで開く</a></td><td>実習①：MediaPipeで肩の角度を2Dと3Dで測り、正解と比べる。実習②：手首の速さ</td></tr>
+<tr><td>発展のノート</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/03_advanced.ipynb">Colabで開く</a></td><td>A 挙上面と挙上角、B 代償、C 手指（任意）</td></tr>
+<tr><td>推論用のノート</td><td><a href="https://colab.research.google.com/github/k0heiun0/pt_seminar/blob/main/notebooks/00_body4d_inference.ipynb">Colabで開く</a></td><td>SAM-Body4Dで動画を処理し、正解と比べる（任意・GPUとHugging Faceの準備が必要）</td></tr>
 </table>
 
 <h2>ノートの使い方</h2>
 <ol>
 <li>「Colabで開く」を押し、Googleアカウントでログインする</li>
 <li>左上の［ドライブにコピー］を押す（コピーしないと書き換えが保存されない）</li>
-<li>「2. データを持ってくる」のセルに、講師から配られたIDを貼る</li>
-<li>上のセルから順に、▶を全部押す</li>
+<li>上のセルから順に、▶を全部押す（データは自動で読み込まれる）</li>
 </ol>
 
-<h2>サンプルデータ</h2>
-<p>公開されている動画（Pexels）をSAM-Body4Dで推論し、1コマごとの体の22点の位置にしたものです。患者のデータではありません。</p>
+<h2>配布データ</h2>
+<p>ノートが自動で読み込みます。どちらも患者のデータではありません。出典と加工内容は<a href="https://github.com/k0heiun0/pt_seminar/blob/main/data/README.md">data/README.md</a>にあります。</p>
 <ul>
-<li><a href="data/rom_task_output.json">rom_task_output.json</a>：真横から撮った肩の前方挙上の繰り返し（7秒・175コマ）</li>
-<li><a href="data/reaching_output.json">reaching_output.json</a>：グラスに水を注ぎ、手に取る動作（8秒・200コマ）</li>
+<li>肩の外転（正面・斜め・横・誤った回）とモーションキャプチャーの正解：REHAB24-6（Masaryk大学）。CC BY-NC 4.0（非営利の利用に限る）</li>
+<li>ボトルを持ち上げる手：An upper limb stroke rehabilitation exercise video dataset（Mendeley Data）。CC BY 4.0</li>
 </ul>
 
 <h2>自分の動画で試したい人へ</h2>
-<p><a href="https://github.com/k0heiun0/pt_seminar/blob/main/docs/handout-hf-setup.md">Hugging Faceアカウントの事前準備の手順書</a>を先に済ませてから、「自分の動画で動かす」のノートを開いてください。本編の実習ノートには、この準備は要りません。</p>
+<p><a href="https://github.com/k0heiun0/pt_seminar/blob/main/docs/handout-hf-setup.md">Hugging Faceアカウントの事前準備の手順書</a>を先に済ませてから、「推論用のノート」を開いてください。本編の実習ノートは、自分のスマホ動画をアップロードするだけで測れます（準備は要りません）。</p>
 </main>
 </body>
 </html>
